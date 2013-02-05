@@ -15,4 +15,5 @@ package core;
 public class NewClass {
     private int number;
     
+    
 }
