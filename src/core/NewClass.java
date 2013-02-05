@@ -7,7 +7,12 @@ package core;
 /**
  *
  * @author admin
+ *
+ * 
+ * 
  */
+
 public class NewClass {
+    private int number;
     
 }
