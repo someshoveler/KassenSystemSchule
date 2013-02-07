@@ -14,6 +14,6 @@ package core;
 
 public class NewClass {
     private int number;
-    
+    //kill all humans
     
 }
