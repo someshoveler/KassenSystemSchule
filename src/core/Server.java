@@ -6,14 +6,8 @@ package core;
 
 /**
  *
- * @author admin
- *
- * 
- * 
+ * @author marcreinke
  */
-
-public class NewClass {
-    private int number;
-    //kill all humans
+public class Server {
     
 }
