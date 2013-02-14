@@ -27,6 +27,10 @@ public Adminpanel() throws IOException {
     OutputStream output=server.getOutputStream();
     writer =new PrintWriter(server.getOutputStream(),true);
     reader =new BufferedReader(new InputStreamReader((server.getInputStream())));
+    System.out.println("Authentication needed!");
+    System.out.println("Username:");
+    String user= sc.next();
+    
     
 
 }
