@@ -8,6 +8,6 @@ package core;
  *
  * @author marcreinke
  */
-public class Kasse {
+public class Kunde {
     
 }
