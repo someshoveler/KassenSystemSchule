@@ -6,6 +6,7 @@ package core;
 import java.io.FileInputStream;
 import java.io.BufferedInputStream;
 import java.util.Properties;
+import java.io.IOException;
 
 /**
  *
