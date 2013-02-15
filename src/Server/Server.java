@@ -3,12 +3,8 @@
  * and open the template in the editor.
  */
 package Server;
-import Server.WorkerThread;
-import java.net.*;
 import java.io.*;
-
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.net.*;
 import java.util.Properties;
 /**
  *
@@ -48,15 +44,6 @@ public class Server {
     
     }
     
-    public void test()
-    {
-    	System.out.println("Test");
-    }
-
-
-	/**
-	 * main MEthode zum Starten des Servers
-	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		try {
