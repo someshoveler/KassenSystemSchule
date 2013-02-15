@@ -39,7 +39,7 @@ public class Server {
     
     public static void main(String[] args) throws IOException {
        Server confInst = new Server();
-       confInst.configure();
+       confInst.configure("localhost", "KassenSys", "root", "root");
        
     }
 
