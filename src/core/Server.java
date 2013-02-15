@@ -14,12 +14,11 @@ import java.util.Properties;
  * @author marcreinke
  */
 public class Server {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     public void configure(){
-=======
+
     public void configure(String host, String dbname, String dbuser, String password){
->>>>>>> propset
+
         Properties props = new Properties();
        try {
     		//set the properties value
@@ -44,7 +43,7 @@ public class Server {
        confInst.configure();
        
     }
-=======
+
     private ServerSocket server1= new ServerSocket(1234);
     private Socket client;
     private InputStream input;
