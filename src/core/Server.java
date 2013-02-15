@@ -15,8 +15,7 @@ import java.util.Properties;
  */
 public class Server {
 
-    public void configure(){
-
+   
     public void configure(String host, String dbname, String dbuser, String password){
 
         Properties props = new Properties();
@@ -57,7 +56,4 @@ public Server() throws IOException {
 }
     
 
-    
->>>>>>> Class Ware
-    
-}
+
