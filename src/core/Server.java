@@ -15,13 +15,18 @@ import java.util.Properties;
  */
 public class Server {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public void configure(){
+=======
+    public void configure(String host, String dbname, String dbuser, String password){
+>>>>>>> propset
         Properties props = new Properties();
        try {
     		//set the properties value
-    		props.setProperty("database", "localhost");
-    		props.setProperty("dbuser", "mkyong");
-    		props.setProperty("dbpassword", "password");
+                props.setProperty("dbhost", host);
+    		props.setProperty("database", dbname);
+    		props.setProperty("dbuser", dbuser);
+    		props.setProperty("dbpassword", password);
  
     		//save properties to project root folder
     		props.store(new FileOutputStream("config.properties"), null);
