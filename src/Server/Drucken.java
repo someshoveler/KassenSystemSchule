@@ -6,7 +6,7 @@ import java.awt.print.*;
 
 public class Drucken
 {
-  public static void main( String[] args ) throws PrinterException
+  public static void print() throws PrinterException
   {
     PrinterJob pjob = PrinterJob.getPrinterJob();
     if ( pjob.printDialog() == false )
