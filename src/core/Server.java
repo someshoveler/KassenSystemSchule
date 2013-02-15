@@ -17,6 +17,7 @@ public class Server {
 
    
     public void configure(String host, String dbname, String dbuser, String password){
+
         Properties props = new Properties();
        try {
     		//set the properties value
@@ -36,11 +37,12 @@ public class Server {
     
     }
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
        Server confInst = new Server();
        confInst.configure();
        
     }
+
     private ServerSocket server1= new ServerSocket(1234);
     private Socket client;
     private InputStream input;
@@ -54,3 +56,5 @@ public Server() throws IOException {
 }
     
 
+
+}
