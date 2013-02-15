@@ -37,23 +37,27 @@ public class Server {
     
     }
     
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
+       try{
        Server confInst = new Server();
        confInst.configure("localhost", "KassenSys", "root", "root");
+       }catch(Exception e) {
+       e.printStackTrace();
        
+       }
     }
 
-    private ServerSocket server1= new ServerSocket(1234);
-    private Socket client;
-    private InputStream input;
-    private OutputStream output;
+//    private ServerSocket server1= new ServerSocket(1234);
+//    private Socket client;
+//    private InputStream input;
+//    private OutputStream output;
 
-public Server() throws IOException {
-    Socket client=server1.accept();
-    InputStream input=client.getInputStream();
-    OutputStream output=client.getOutputStream();
-    
-}
+//public Server() throws IOException {
+//    Socket client=server1.accept();
+//    InputStream input=client.getInputStream();
+//    OutputStream output=client.getOutputStream();
+//    
+//}
     
 
 
