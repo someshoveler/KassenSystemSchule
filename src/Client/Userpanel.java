@@ -2,7 +2,11 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package core;
+package Client;
+import Server.Kasse;
+import Server.Kassierer;
+import Server.Kunde;
+import Server.Ware;
 import java.util.Scanner;
 import java.net.*;
 import java.io.*;
@@ -11,7 +15,7 @@ import java.io.*;
  *
  * @author marcreinke
  */
-public class Adminpanel {
+public class Userpanel {
     private Scanner sc = new Scanner(System.in);
     private Ware ware;
     private Kunde kunde;
@@ -19,20 +23,38 @@ public class Adminpanel {
     private Kasse kasse;
     private PrintWriter writer;
     private BufferedReader reader;
+    private ObjectInputStream oIn;
+    private ObjectOutputStream oOut;
+    private int authResult;
+    private int securitylevel;
     
-public Adminpanel() throws IOException {
+public Userpanel() throws IOException {
     System.out.println("Connecting to Server...");
     Socket server=new Socket("127.0.0.1",1234);
     InputStream input=server.getInputStream();
     OutputStream output=server.getOutputStream();
     writer =new PrintWriter(server.getOutputStream(),true);
     reader =new BufferedReader(new InputStreamReader((server.getInputStream())));
-    System.out.println("Authentication needed!");
-    System.out.println("Username:");
-    String user= sc.next();
+    securitylevel= authenticate();
+    
+   
+    
+    
     
     
 
+}
+
+public int authenticate() throws IOException{
+    reader.readLine();
+    String user= sc.next();
+    writer.println(user);
+    reader.readLine();
+    String password= sc.next();
+    writer.println(password);
+    authResult = reader.read();
+    
+    return authResult;
 }
 
 public void addArtikel (){

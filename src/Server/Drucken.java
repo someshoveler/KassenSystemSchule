@@ -1,3 +1,5 @@
+package Server;
+
 //aus Java ist auch eine Insel
 
 import java.awt.print.*;
