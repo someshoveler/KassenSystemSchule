@@ -36,6 +36,13 @@ public Userpanel() throws IOException {
     writer =new PrintWriter(server.getOutputStream(),true);
     reader =new BufferedReader(new InputStreamReader((server.getInputStream())));
     securitylevel= authenticate();
+    if (securitylevel == 0) {
+        addClient();
+        securitylevel = 1;
+    }
+    else{
+        mainMenu();
+    }
     
    
     
@@ -57,9 +64,19 @@ public int authenticate() throws IOException{
     return authResult;
 }
 
-public void addArtikel (){
+public void addArticle (){
     
 }
+
+    private void addClient() {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
+
+    private void mainMenu() {
+        writer.print(0);
+        System.out.println("Your Security level: "+securitylevel);
+        reader.readLine();
+    }
     
     
     
