@@ -72,7 +72,7 @@ public void addArticle (){
         throw new UnsupportedOperationException("Not yet implemented");
     }
 
-    private void mainMenu() {
+    private void mainMenu() throws IOException {
         writer.print(0);
         System.out.println("Your Security level: "+securitylevel);
         reader.readLine();
